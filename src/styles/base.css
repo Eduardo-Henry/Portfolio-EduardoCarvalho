@@ -1,0 +1,39 @@
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  font-family: var(--font-primary);
+  color: var(--text-main);
+  background: var(--bg-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.app { max-width: var(--container); margin: 0 auto; padding: 0 clamp(16px, 4vw, 20px); }
+.muted { color: var(--text-secondary); }
+.detail { color: var(--text-main); }
+.section-title { font-family: var(--font-primary); font-weight: 400; letter-spacing: -0.02em; font-size: clamp(3rem, 10vw, 128px); }
+.display { font-size: clamp(3rem, 10vw, 128px); font-weight: 400; line-height: 0.95; margin: 0; }
+.lead { font-size: clamp(1rem, 2.2vw, 1.125rem); }
+
+.section { padding: 48px 0; border-top: none; }
+.section h2 { font-size: 2rem; margin: 0 0 12px; }
+.section-content p { margin: 0 0 12px; color: var(--text-secondary); }
+
+.pill { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--text-main); color: var(--text-main); padding: 6px 12px; border-radius: 999px; font-weight: 600; font-size: 0.85rem; width: fit-content; }
+
+.button { display: inline-block; border: 1px solid var(--text-main); color: var(--bg-dark); background: var(--text-main); padding: 8px 12px; border-radius: 4px; text-decoration: none; font-weight: 600; cursor: pointer; transition: all 0.3s ease; }
+.button:hover { opacity: 0.9; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(232,232,232,0.25); }
+.link { color: var(--text-main); text-decoration: none; transition: all 0.3s ease; position: relative; }
+.link:hover { color: var(--text-main); }
+.link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: var(--text-main); transition: width 0.3s ease; }
+.link:hover::after { width: 100%; }
+
+.footer { padding: 40px 0; color: var(--text-secondary); text-align: center; border-top: none; margin-top: 24px; }
+
+/* Shared background using GuideLinesWhite */
+.bg-guidelines { background: url('/src/assets/GuideLinesBlack.png') center/cover no-repeat; }
+
+@media (max-width: 560px) {
+  .nav a { margin-left: 12px; }
+}

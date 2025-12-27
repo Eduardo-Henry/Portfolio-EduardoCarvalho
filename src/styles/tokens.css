@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;600;700&family=Noto+Sans:wght@300;400;600;700&display=swap');
+
+:root {
+  --bg-dark: #FFFFFF;
+  --text-main: #000506;
+  --text-secondary: #5A5A5A;
+  --details: #213F95;
+  --border: #E0E0E0;
+
+  --font-primary: 'Bricolage Grotesque', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Arial, sans-serif;
+  --font-secondary: 'Noto Sans', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Arial, sans-serif;
+
+  --container: 1140px;
+  --radius: 14px;
+}

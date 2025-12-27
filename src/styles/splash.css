@@ -1,0 +1,61 @@
+/* Splash overlay for logo reveal */
+.splash-screen {
+  position: fixed;
+  inset: 0;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  opacity: 1;
+  visibility: visible;
+}
+
+.splash-screen.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.splash-logo {
+  width: 50vw;
+  height: 50vh;
+  border-radius: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: splash-pulse 1.2s ease-in-out infinite;
+}
+
+.splash-logo img {
+  width: min(28vw, 320px);
+  height: auto;
+  display: block;
+}
+
+@keyframes splash-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+}
+
+@media (max-width: 768px) {
+  .splash-logo {
+    width: 60vw;
+    height: 60vh;
+    border-radius: 24px;
+  }
+  .splash-logo img {
+    width: min(40vw, 280px);
+  }
+}
+
+@media (max-width: 560px) {
+  .splash-logo {
+    width: 70vw;
+    height: 70vh;
+    border-radius: 20px;
+  }
+  .splash-logo img {
+    width: min(50vw, 240px);
+  }
+}

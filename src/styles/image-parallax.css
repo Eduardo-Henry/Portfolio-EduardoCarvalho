@@ -1,0 +1,41 @@
+/* Floating parallax image */
+.parallax-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.parallax-image {
+  position: fixed;
+  border-radius: 4px;
+  object-fit: cover;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
+  will-change: width, height, transform;
+  transition: width 0.2s ease-out, height 0.2s ease-out, left 0.2s ease-out, top 0.2s ease-out, opacity 0.2s ease-out;
+  pointer-events: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 900px) {
+  .parallax-image { 
+    border-radius: 28px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  }
+}
+
+@media (max-width: 768px) {
+  .parallax-image { 
+    border-radius: 24px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+  }
+}
+
+@media (max-width: 560px) {
+  .parallax-image { 
+    border-radius: 20px;
+    border-width: 0.5px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+}

@@ -1,0 +1,26 @@
+/* Footer (dark, three-column layout) */
+.footer { padding: 40px 0; color: var(--text-secondary); border-top: 1px solid var(--border); margin-top: 24px; }
+.footer-layout { display: grid; grid-template-columns: 1.2fr 0.8fr 1fr; gap: 20px; align-items: start; }
+
+/* Left: big headings */
+.footer-headings { list-style: none; padding: 0; margin: 0; }
+.footer-headings li { font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--text-main); margin-bottom: 6px; cursor: pointer; transition: all 0.3s ease; }
+.footer-headings li:hover { color: var(--text-main); transform: translateX(4px); opacity: 0.8; }
+
+/* Middle: mini list */
+.footer-mini { list-style: none; padding: 0; margin: 0; }
+.footer-mini li { margin-bottom: 6px; cursor: pointer; transition: all 0.3s ease; }
+.footer-mini li:hover { color: var(--text-main); transform: translateX(4px); opacity: 0.8; }
+
+/* Right: copyright + contact + pills */
+.footer-right { display: grid; justify-items: end; gap: 10px; }
+.copyright { color: var(--text-secondary); }
+.contact-block { display: grid; gap: 6px; justify-items: end; }
+.contact-lines { display: grid; gap: 4px; justify-items: end; }
+.contact-lines span { transition: all 0.3s ease; cursor: pointer; }
+.contact-lines span:hover { color: var(--text-main); opacity: 0.8; }
+
+.footer-pills { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+.footer-pills .pill { display: inline-flex; align-items: center; gap: 6px; text-decoration: none;}
+.footer-pills .pill-icon { width: 16px; height: 16px; display: block; }
+.footer-pills .pill:hover { background: rgba(232,232,232,0.1); transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.35); }

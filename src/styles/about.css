@@ -1,0 +1,58 @@
+/* About section with parallax image anchor */
+.about-section { 
+  position: relative; 
+  padding: 0; 
+  min-height: 280vh;
+  isolation: isolate;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+.bg-guidelines { background: url('/src/assets/GuideLinesWhite.png') center/cover no-repeat; }
+.about-grid { 
+  position: sticky;
+  top: 0;
+  min-height: 100vh;
+  display: grid; 
+  grid-template-columns: 1.1fr 1fr; 
+  gap: 32px;
+  padding: 48px clamp(20px, calc((100vw - var(--container)) / 2), 160px); 
+  align-items: center;
+  padding: 48px 0;
+}
+.about-image-wrap { display: flex; justify-content: flex-start; min-height: 320px; }
+/* Fixed portrait will snap inside this anchor */
+.about-image-anchor { width: clamp(320px, 50vw, 600px); aspect-ratio: 4 / 3; border-radius: var(--radius); opacity: 0; pointer-events: none; }
+.about-right { display: flex; flex-direction: column; gap: 12px; position: relative; z-index: 5; min-height: 400px; align-items: flex-start; }
+.subhead { font-size: 30px; font-weight: 400; margin: 12px 0 8px; }
+.text-block { width: 100%; }
+.intro-text { max-width: 520px; }
+.reveal-text { font-size: 1rem; line-height: 1.7; max-width: 520px; }
+
+@media (max-width: 1024px) {
+  .about-grid { grid-template-columns: 1fr 1fr; gap: 24px; padding: 40px clamp(20px, 5vw, 48px); }
+  .about-image-anchor { width: clamp(280px, 45vw, 500px); }
+}
+
+@media (max-width: 900px) {
+  .about-section { min-height: 220vh; }
+  .about-grid { grid-template-columns: 1fr; gap: 32px; padding: 40px clamp(20px, 5vw, 40px); }
+  .about-image-wrap { justify-content: center; }
+  .about-image-anchor { width: clamp(320px, 70vw, 480px); margin: 0 auto; }
+  .about-right { align-items: center; text-align: center; }
+  .intro-text, .reveal-text { max-width: 100%; }
+}
+
+@media (max-width: 768px) {
+  .about-section { min-height: 180vh; margin-left: 0; width: 100%; }
+  .about-grid { padding: 32px 20px; }
+  .subhead { font-size: 24px; }
+  .about-image-wrap { display: none; }
+  .about-image-anchor { display: none; }
+}
+
+@media (max-width: 560px) {
+  .about-section { min-height: 150vh; }
+  .about-grid { grid-template-columns: 1fr; gap: 24px; padding: 24px 20px; }
+  .subhead { font-size: 20px; margin: 8px 0 6px; }
+  .reveal-text { font-size: 0.95rem; }
+}
