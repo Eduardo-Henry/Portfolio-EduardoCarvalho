@@ -2,7 +2,7 @@ import React from 'react'
 import '../../styles/footer.css'
 import iconInstagram from '../../assets/iconInstagram.svg'
 import iconLinkedin from '../../assets/iconLinkedin.svg'
-import iconGithub from '../../assets/iconGitHub.svg'
+import iconGithub from '../../assets/iconGithub.svg'
 export default function Footer() {
   return (
     <footer className="footer">

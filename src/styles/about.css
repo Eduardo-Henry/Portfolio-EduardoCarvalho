@@ -7,7 +7,7 @@
   width: 100vw;
   margin-left: calc(50% - 50vw);
 }
-.bg-guidelines { background: url('/src/assets/GuideLinesWhite.png') center/cover no-repeat; }
+.bg-guidelines { background: url('/src/assets/GuideLinesBlack.png') center/cover no-repeat; }
 .about-grid { 
   position: sticky;
   top: 0;
